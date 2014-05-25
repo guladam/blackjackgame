@@ -28,19 +28,19 @@ public class TestKez {
 	}
 	
 	@Test
-	public void Test4Asz() {
+	public void test4Asz() {
 		kez.setLapok(letrehozKez(new int[] {1,1,1,1}));
 		assertEquals(14, kez.getErtek());
 	}
 
 	@Test
-	public void Test3Dama(){
+	public void test3Dama(){
 		kez.setLapok(letrehozKez(new int[] {10,10,10}));
 		assertEquals(30, kez.getErtek());
 	}
 	
 	@Test
-	public void Test21(){
+	public void test21(){
 		kez.setLapok(letrehozKez(new int[] {10,1}));
 		assertEquals(21, kez.getErtek());
 		assertEquals(true, kez.isBlackJack());
@@ -50,13 +50,13 @@ public class TestKez {
 	}
 	
 	@Test
-	public void TestNemSok(){
+	public void testNemSok(){
 		kez.setLapok(letrehozKez(new int[] {10,7,2,1}));
 		assertEquals(20, kez.getErtek());
 	}
 	
 	@Test
-	public void TestSoftA6(){
+	public void testSoftA6(){
 		kez.setLapok(letrehozKez(new int[] {1, 6, 6}));
 		assertEquals(13, kez.getErtek());
 	}

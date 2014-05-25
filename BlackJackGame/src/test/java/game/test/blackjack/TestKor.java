@@ -32,7 +32,7 @@ public class TestKor {
 	}
 	
 	@Test
-	public void TestJatekosNyer(){
+	public void testJatekosNyer(){
 		EmberJatekos eJatekos = kor.getEmberJatekosok().get(0);
 		
 		eJatekos.getKez().setLapok(
@@ -45,7 +45,7 @@ public class TestKor {
 	}
 	
 	@Test
-	public void TestOsztoNyer(){
+	public void testOsztoNyer(){
 		EmberJatekos eJatekos = kor.getEmberJatekosok().get(0);
 		
 		eJatekos.getKez().setLapok(
@@ -58,7 +58,7 @@ public class TestKor {
 	}
 	
 	@Test
-	public void TestDontetlen(){
+	public void testDontetlen(){
 		EmberJatekos eJatekos = kor.getEmberJatekosok().get(0);
 		
 		eJatekos.getKez().setLapok(
@@ -72,7 +72,7 @@ public class TestKor {
 	}
 	
 	@Test
-	public void TestSzetvalasztas(){
+	public void testSzetvalasztas(){
 		EmberJatekos eJatekos = kor.getEmberJatekosok().get(0);
 		
 		eJatekos.getKez().setLapok(
