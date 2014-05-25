@@ -76,9 +76,7 @@ public class RangLista {
 			logger.error("Kivetel valtodott ki a RangLista olvasa soran: " + e.getClass());
 		} catch (SAXException e) {
 			logger.error("Kivetel valtodott ki a RangLista olvasa soran: " + e.getClass());
-		} catch (IOException e) {
-			logger.error("Kivetel valtodott ki a RangLista olvasa soran: " + e.getClass());
-		}
+		} 
 		
 		return sb.toString();
 		

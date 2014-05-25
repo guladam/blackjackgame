@@ -30,6 +30,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
@@ -368,6 +369,8 @@ public class FoAblak extends JFrame implements ActionListener{
 					megjelenitInformacio("A ranglista kiuritese sikeres!");
 					logger.info("A Ranglistat a felhasznalo kiuritette.");
 				} catch (IOException e1) {
+					RangLista.letrehozLista(Jatek.jatekosNeve, Jatek.nyertJatszmak, 
+							Jatek.osszesJatszma, Jatek.arany);
 					logger.error("A Ranglista kiuritese sikertelen volt! Kivetel: " + e1.getClass());
 				}
 				
@@ -712,6 +715,8 @@ public class FoAblak extends JFrame implements ActionListener{
 					"Ranglista", JOptionPane.INFORMATION_MESSAGE);
 			logger.info("Ranglista beolvasva!");
 		} catch (IOException e) {
+			RangLista.letrehozLista(Jatek.jatekosNeve, Jatek.nyertJatszmak, Jatek.osszesJatszma,
+					Jatek.arany);
 			JOptionPane.showInternalMessageDialog(tartalomPanel, "Ures Ranglista",
 					"Ranglista", JOptionPane.INFORMATION_MESSAGE);
 			logger.error("A Ranglista betoltese sikertelen! Kivetel: " + e.getClass());
@@ -737,6 +742,7 @@ public class FoAblak extends JFrame implements ActionListener{
 					RangLista.hozzaAdLista(Jatek.jatekosNeve, Jatek.nyertJatszmak, Jatek.osszesJatszma
 							, Jatek.arany);
 					megjelenitInformacio("Az eredmenyed a ranglistaba rogzitesre kerult! Koszi a jatekot!");
+					logger.info("A Ranglista frissitve.");
 				}
 			} catch (IOException e) {
 				logger.error("A Ranglistahoz hozzaadas sikertelen volt! Kivetel: " + e.getClass());
